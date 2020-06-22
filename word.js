@@ -27,15 +27,3 @@ this.userGuess = function(input){
 
 module.exports = Word;
 
-/*
-    "brazil",
-    "pakistan",
-    "nigeria",
-    "bangladesh",
-    "russia",
-    "mexico",
-    "japan",
-    "philippines",
-    "ethiopia",
-    "egypt",
-    "vietnam"*/

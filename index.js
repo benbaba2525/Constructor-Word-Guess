@@ -9,43 +9,43 @@ var wordChoices = [
   [
     "TAXI",
     "Yellow car in New York City"
-
   ],
   [
     "BACK",
     "Front and _ _ _ _"
-],
-["KITTEN",
-"Cute little baby cat"
-],
-[
+  ],
+  [
+  "KITTEN",
+  "Cute little baby cat"
+  ],
+  [
   "NEXT",
   "Immediately following in order"
-],
-[
+  ],
+  [
   "UNICORN",
   "Fastasy horned horse"
-],
-[
+  ],
+  [
   "PRINCE",
   "Son of a King, Charming"
-],
-[
+  ],
+  [
   "REPORT",
   "_ card, a list of grades"
-],
-[
+  ],
+  [
   "JOKER",
   "Clown, or jester playing card"
-],
-[
+  ],
+  [
   "POPCORN",
   "Popular cinema snack"
-],
-[
+  ],
+  [
   "UFO",
   "Alien spaceship"
-]
+  ]
     
 ];
 //Random the word answer
