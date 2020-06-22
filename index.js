@@ -6,26 +6,53 @@ var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRS";
 
 //   List of the 15 most populous countries with a density of population  
 var wordChoices = [
-    "china",
-    "india",
-    "usa",
-    "indonesia",
-    "brazil",
-    "pakistan",
-    "nigeria",
-    "bangladesh",
-    "russia",
-    "mexico",
-    "japan",
-    "philippines",
-    "ethiopia",
-    "egypt",
-    "vietnam"
+  [
+    "TAXI",
+    "Yellow car in New York City"
+
+  ],
+  [
+    "BACK",
+    "Front and _ _ _ _"
+],
+["KITTEN",
+"Cute little baby cat"
+],
+[
+  "NEXT",
+  "Immediately following in order"
+],
+[
+  "UNICORN",
+  "Fastasy horned horse"
+],
+[
+  "PRINCE",
+  "Son of a King, Charming"
+],
+[
+  "REPORT",
+  "_ card, a list of grades"
+],
+[
+  "JOKER",
+  "Clown, or jester playing card"
+],
+[
+  "POPCORN",
+  "Popular cinema snack"
+],
+[
+  "UFO",
+  "Alien spaceship"
+]
+    
 ];
 //Random the word answer
-var randomWordChoices = wordChoices[Math.floor(Math.random() * wordChoices.length)];
+randomWordChoices = wordChoices[Math.floor(Math.random() * wordChoices.length)];
 //Pass random word through word constructor
-var computerWord = new Word(randomWordChoices);
+var computerWord = new Word(randomWordChoices[0]);
+var hintWord = randomWordChoices[1];
 var requireNewWord = false;
 
 // Array for guessed letters
@@ -38,21 +65,26 @@ var guessesLeft = 10;
 // Start the Game
 function startGame() {
   console.log(chalk.yellow("\n=================================================================\n"));
-  console.log(chalk.yellow("Guess the 15 most populous countries with a density of population"));
+  console.log(chalk.yellow("                      Guess The Word !!!                    "));
   console.log(chalk.yellow("\n=================================================================\n"));
+  console.log(chalk.yellow("\nHint!! : "+ hintWord+"\n"));
 }
 
 
 function runGame() {
   // Generates new word for Word constructor if true
   if (requireNewWord) {
-    // Selects random wordChoices array
-    randomWordChoices = wordChoices[Math.floor(Math.random() * wordChoices.length)];
-    // Passes random word through the Word constructor
-    computerWord = new Word(randomWordChoices);
-    requireNewWord = false;
-  }
+  // Selects random wordChoices array
+  randomWordChoices = wordChoices[Math.floor(Math.random() * wordChoices.length)];
+  // Passes random word through the Word constructor
+  computerWord = new Word(randomWordChoices[0]);
+  var hintWord = randomWordChoices[1];
+  requireNewWord = false;
+ //Show hint word
+ console.log(chalk.yellow("\nHint!! : "+ hintWord+"\n"));
 
+    
+  }
 
   // Check if a letter guessed is correct
   var wordComplete = [];
@@ -60,6 +92,7 @@ function runGame() {
 
   // letters remaining to be guessed
   if (wordComplete.includes(false)) {
+   
     inquirer
       .prompt([
         {
@@ -115,9 +148,9 @@ function runGame() {
            //Call to runGame
               runGame();
             } else {
-              console.log(chalk.red("Sorry, you lose!!\n"));
+              console.log(chalk.red("SORRY, YOU LOSE!!\n"));
 
-              console.log(chalk.green("The answer is " + '"'+randomWordChoices+'"\n'));
+              console.log(chalk.green("The answer is " + '" '+randomWordChoices[0]+' "\n'));
               restartGame();
             }
             function wordCheck(key) {
