@@ -1,7 +1,7 @@
 # Constructor-Word-Guess
 
 # Overview
-Word Guess is a Node.js command-line game that using constructor and interactive prompts functions. Guess the word using hint keyword.
+Word Guess game is a Node.js command-line application that using constructor and interactive prompts functions. 
 
 ## Instructions
 
@@ -16,18 +16,17 @@ There are three files:
 
 2. Word.js: Contains a constructor, Word that depends on the Letter constructor. This is used to create an object              representing the current word the user is attempting to guess. That means the constructor should define:
 
-  An array of new Letter objects representing the letters of the underlying word
-  A function that returns a string representing the word. This should call the function on each letter object (the first       function defined in Letter.js) that displays the character or an underscore and concatenate those together.
-  A function that takes a character as an argument and calls the guess function on each letter object (the second function     defined in Letter.js)
+   An array of new Letter objects representing the letters of the underlying word
+   A function that returns a string representing the word. This should call the function on each letter object (the first      function defined in Letter.js) that displays the character or an underscore and concatenate those together.
+   A function that takes a character as an argument and calls the guess function on each letter object (the second function    defined in Letter.js)
 
 3. index.js: The file containing the logic for the course of the game, which depends on Word.js and:
    Randomly selects a word and uses the Word constructor to store it
    Prompts the user for each guess and keeps track of the user's remaining guesses
 
+##
 
-
-
-
+![alt-spotify-this-song](https://raw.githubusercontent.com/benbaba2525/Constructor-Word-Guess/master/ezgif.com-video-to-gif.gif)
 
 
 
